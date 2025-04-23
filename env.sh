@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+KAFKA_VERSION=4.0.0
+KAFKA_DIR=$(pwd)
+KAFKA_BIN_DIR=$KAFKA_DIR/kafka_2.13-$KAFKA_VERSION/bin
