@@ -43,7 +43,7 @@ $KAFKA_BIN_DIR/kafka-server-start.sh broker.1.sasl.plain.properties &> broker.1.
 #kafka-server-start broker.1.properties &> broker.1.log &
 
 # echo "Read cluster metadata with the following command: kafka-metadata-shell --directory tmp/kraft-controller-logs/_cluster-metadata-0/
-echo "Read cluster metadata with the following command: kafka-metadata-shell --directory ./1/kraft-metadata-dir/__cluster_metadata-0/"
+echo "Read cluster metadata with the following command: kafka-metadata-shell 1/kraft-metadata-dir/__cluster_metadata-0/00000000000000007144-0000000001.checkpoint"
 
 # debug kraft with "kafka-metadata-quorum --command-config client.properties --bootstrap-server localhost:9092 describe --status"
 echo "Debug kraft with 'kafka-metadata-quorum --command-config client.properties --bootstrap-server localhost:9092 describe --status'"

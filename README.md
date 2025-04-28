@@ -28,7 +28,7 @@ KAFKA_BIN_DIR=$KAFKA_DIR/kafka_2.13-$KAFKA_VERSION/bin
 
 # older versions
 #$KAFKA_BIN_DIR/kafka-metadata-shell.sh --directory ./1/kraft-metadata-dir/__cluster_metadata-0/
-$KAFKA_BIN_DIR/kafka-metadata-shell.sh --snapshot ./1/kraft-metadata-dir/__cluster_metadata-0/leader-epoch-checkpoint
+$KAFKA_BIN_DIR/kafka-metadata-shell.sh --snapshot 1/kraft-metadata-dir/__cluster_metadata-0/00000000000000007144-0000000001.checkpoint
 $KAFKA_BIN_DIR/kafka-metadata-quorum.sh --command-config client.properties --bootstrap-server localhost:9092 describe --status
 $KAFKA_BIN_DIR/kafka-metadata-quorum.sh --command-config client.properties --bootstrap-server localhost:9092 describe --replication
 $KAFKA_BIN_DIR/kafka-dump-log.sh --cluster-metadata-decoder --files 1/kraft-metadata-dir/__cluster_metadata-0/00000000000000000000.log
